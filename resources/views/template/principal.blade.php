@@ -25,6 +25,7 @@
 
     <!-- Custom CSS -->
     <link href="{{asset('css/simple-sidebar.css')}}" rel="stylesheet">
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -53,9 +54,20 @@
             <li>
                 <a href="#">Intranet</a>
             </li>
+            <ul class="sub-menu collapse" id="intranet">
+                <li href="#">Empresa</li>
+                <li href="#">Setor</li>
+                <li href="#">Funcionario</li>
+                <li href="#">Meta</li>
+            </ul>
             <li>
                 <a href="#">Inventario</a>
             </li>
+            <ul class="sub-menu collapse" id="inventario">
+                <li href="#">Etiqueta</li>
+                <li href="#">Contagem</li>
+                <li href="#">Apuração</li>
+                <li href="#">Dicas</li>
             <li>
                 <a href="#">Eventos</a>
             </li>

@@ -42,7 +42,7 @@ class EmpresaController extends Controller
     {
         $empresa = Empresa::create($request->all());
 
-        return redirect('empresas');
+        return redirect('empresa');
     }
 
     /**
