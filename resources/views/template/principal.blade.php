@@ -18,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Portal Web Corporativo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
@@ -38,69 +38,37 @@
 
 <body>
 
-<div id="wrapper">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        @include('template.leftNavBar')
+        <!-- /#sidebar-wrapper -->
 
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                    Portal Web Corporativo
-                </a>
-            </li>
-            <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li>
-                <a href="#">Intranet</a>
-            </li>
-            <ul class="sub-menu collapse" id="intranet">
-                <li href="#">Empresa</li>
-                <li href="#">Setor</li>
-                <li href="#">Funcionario</li>
-                <li href="#">Meta</li>
-            </ul>
-            <li>
-                <a href="#">Inventario</a>
-            </li>
-            <ul class="sub-menu collapse" id="inventario">
-                <li href="#">Etiqueta</li>
-                <li href="#">Contagem</li>
-                <li href="#">Apuração</li>
-                <li href="#">Dicas</li>
-            <li>
-                <a href="#">Eventos</a>
-            </li>
-            <li>
-                <a href="#">Serviços</a>
-            </li>
-            <li>
-                <a href="#">Corporação</a>
-            </li>
-            <li>
-                <a href="#">Contato</a>
-            </li>
-        </ul>
-    </div>
-    <!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
 
-                    @yield('content')
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
 
-                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Ocultar Menu</a>
+                        @yield('pageName')
+                        @yield('content')
+
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Ocultar Menu</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /#page-content-wrapper -->
+        <!-- /#page-content-wrapper -->
 
-</div>
-<!-- /#wrapper -->
+        <!-- Footer -->
+        <footer>
+
+            @include('template.footer')
+
+        </footer><!-- Footer -->
+
+    </div> <!-- /#wrapper -->
 
 <!-- jQuery -->
 <script src="{{asset('js/jquery.js')}}"></script>
@@ -115,6 +83,10 @@
         $("#wrapper").toggleClass("toggled");
     });
 </script>
+
+    <script type="text/javascript">
+        $('.collapse').collapse()
+    </script>
 
 </body>
 

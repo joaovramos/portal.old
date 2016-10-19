@@ -12,11 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome2');
 });
 
 Route::resource('empresa', 'EmpresaController');
-
-Route::get('teste', function (){
-    return view('template.principal2');
-});

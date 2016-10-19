@@ -52,7 +52,9 @@ class EmpresaController extends Controller
      */
     public function show($id)
     {
-        //
+        $empresa = Empresa::find($id);
+
+        return view('empresa.show', compact('empresa'));
     }
 
     /**
@@ -63,7 +65,10 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $empresa = Empresa::find($id);
+
+        return view('empresa.edit', compact('empresa'));
+
     }
 
     /**
@@ -75,7 +80,11 @@ class EmpresaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $empresa = Empresa::find($id);
+
+        $empresa->update($request->all());
+
+        return redirect('empresa');
     }
 
     /**
@@ -86,6 +95,9 @@ class EmpresaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $empresa = Empresa::find($id);
+        $empresa->delete();
+
+        return redirect('empresa');
     }
 }

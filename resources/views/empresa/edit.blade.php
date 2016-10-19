@@ -9,16 +9,22 @@
 
 @extends('template.principal')
 
+@section('pageName')
+
+    <h1>Editar Empresa</h1>
+
+@endsection
+
 @section('content')
 
-    <form method="post" action="{{ action('EmpresasControler@update', $empresa->id) }}">
+    <form method="post" action="{{ action('EmpresaController@update', $empresa->id) }}">
         <div class="form-group">
             <label for="nome">Nome:</label>
             <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome da Empresa"
                    value="{{ $empresa->nome }}">
         </div>
         <div class="form-group">
-            <label for="cnpj">Preço:</label>
+            <label for="cnpj">CNPJ:</label>
             <input type="text" name="cnpj" class="form-control" id="cnpj" placeholder="CNPJ"
                    value="{{ $empresa->cnpj }}">
         </div>
@@ -27,7 +33,7 @@
 
         <input type="hidden" name="_method" value="put" />
 
-        <a class="btn btn-primary" href="{{ action('EmpresasControler@index') }}" role="button">
+        <a class="btn btn-primary" href="{{ action('EmpresaController@index') }}" role="button">
             Voltar
         </a>
         <button type="submit" class="btn btn-primary">Atualizar</button>

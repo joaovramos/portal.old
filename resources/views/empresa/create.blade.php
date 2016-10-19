@@ -9,6 +9,12 @@
 
 @extends('template.principal')
 
+@section('pageName')
+
+    <h1>Cadastrar Empresa</h1>
+
+@endsection
+
 @section('content')
 
 <form method="post" action="{{ action('EmpresaController@store')}}">
