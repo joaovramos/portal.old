@@ -16,13 +16,13 @@
             </a>
         </li>
         <li>
-            <a href="#">Home</a>
+            <a href="{{url('home')}}">Home</a>
         </li>
 
         <li> <a data-toggle="collapse" data-parent="#accordion1" href="#intranet">Intranet</a>
             <ul id="intranet" class="collapse">
                 <a href="{{route('empresa.index')}}"> <li>Empresa</li></a>
-                <li href="#">Setor</li>
+                <a href="{{route('setor.index')}}"> <li>Setor</li></a>
                 <li href="#">Funcionario</li>
                 <li href="#">Meta</li>
             </ul>

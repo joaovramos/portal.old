@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Empresa;
+use App\Setor;
 
-class EmpresaController extends Controller
+class SetorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        $empresas = Empresa::all();
+        $setores = Setor::all();
 
-        return view('empresa.index', compact('empresas'));
+        return view('setor.index', compact('setores'));
     }
 
     /**
@@ -28,7 +28,7 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        return view('setor.create');
+        //
     }
 
     /**
@@ -39,9 +39,7 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        $setor = Setor::create($request->all());
-
-        return redirect('setor');
+        //
     }
 
     /**
@@ -52,9 +50,7 @@ class EmpresaController extends Controller
      */
     public function show($id)
     {
-        $setor = Setor::find($id);
-
-        return view('setor.show', compact('setor'));
+        //
     }
 
     /**
@@ -65,10 +61,7 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        $setor = Setor::find($id);
-
-        return view('setor.edit', compact('setor'));
-
+        //
     }
 
     /**
@@ -80,11 +73,7 @@ class EmpresaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $setor = Setor::find($id);
-
-        $setor->update($request->all());
-
-        return redirect('setor');
+        //
     }
 
     /**
@@ -95,10 +84,6 @@ class EmpresaController extends Controller
      */
     public function destroy($id)
     {
-        $setor = Setor::find($id);
-        $setor->delete();
-
-        Session::flash('message', 'Successfully deleted the nerd!');
-        return redirect('setor');
+        //
     }
 }

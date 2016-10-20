@@ -35,13 +35,14 @@
                     <td>{{ $empresa->nome }}</td>
                     <td>{{ $empresa->cnpj }}</td>
                     <td><a href="{{ action('EmpresaController@show', $empresa) }}"><span class="glyphicon glyphicon-search"></span></a></td>
-                    <td><a href="{{ action('EmpresaController@edit', $empresa) }}"><span class="glyphicon glyphicon-pencil"></span></a> </td>
+                    <td><a href="{{ action('EmpresaController@edit', $empresa) }}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                     <td><a href="{{ action('EmpresaController@destroy', $empresa) }}"><span class="glyphicon glyphicon-remove"></span></a></td>
                 </tr>
                 </tbody>
                 @endforeach
 
-                <button href="{{ route('empresa.create') }}" type="submit" class="btn btn-default">Adicionar</button>
+                <!--<button href="{{ route('empresa.create') }}" type="submit" class="btn btn-default">Adicionar</button>-->
+                <button type="button" onclick="window.location='{{ route("empresa.create") }}'">Adicinar</button>
 
             </div>
 

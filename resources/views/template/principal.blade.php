@@ -49,7 +49,7 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 col-sm-12 col-md-12">
 
                         @yield('pageName')
                         @yield('content')
@@ -64,7 +64,7 @@
         <!-- Footer -->
         <footer>
 
-            @include('template.footer')
+         <!--   @include('template.footer') -->
 
         </footer><!-- Footer -->
 

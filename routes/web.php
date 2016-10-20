@@ -15,4 +15,11 @@ Route::get('/', function () {
     return view('welcome2');
 });
 
+Route::get('home', function () {
+    return view('welcome2');
+});
+
 Route::resource('empresa', 'EmpresaController');
+
+Route::resource('setor', 'SetorController');
+
