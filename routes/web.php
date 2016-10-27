@@ -21,5 +21,8 @@ Route::get('home', function () {
 
 Route::resource('empresa', 'EmpresaController');
 
-Route::resource('setor', 'SetorController');
+Route::resource('departamento', 'DepartamentoController');
 
+Route::resource('funcionario', 'FuncionarioController');
+
+Route::resource('meta', 'MetaController');

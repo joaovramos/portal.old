@@ -19,12 +19,12 @@
             <a href="{{url('home')}}">Home</a>
         </li>
 
-        <li> <a data-toggle="collapse" data-parent="#accordion1" href="#intranet">Intranet</a>
-            <ul id="intranet" class="collapse">
+        <li> <a data-toggle="collapse" data-parent="#accordion1" href="#indicador">Indicador</a>
+            <ul id="indicador" class="collapse">
                 <a href="{{route('empresa.index')}}"> <li>Empresa</li></a>
-                <a href="{{route('setor.index')}}"> <li>Setor</li></a>
-                <li href="#">Funcionario</li>
-                <li href="#">Meta</li>
+                <a href="{{route('departamento.index')}}"> <li>Departamento</li></a>
+                <a href="{{route('funcionario.index')}}"><li>Funcionario</li></a>
+                <a href="{{route('meta.index')}}"><li>Meta</li></a>
             </ul>
 
         </li>
@@ -34,6 +34,17 @@
                 <li href="#">Etiqueta</li>
                 <li href="#">Contagem</li>
                 <li href="#">Apuração</li>
+                <li href="#">Dicas</li>
+            </ul>
+        </li>
+
+        <li> <a data-toggle="collapse" data-parent="#accordion1" href="#intranet">Intranet</a>
+
+            <ul id="intranet" class="collapse">
+                <li href="#">Ramais</li>
+                <li href="#">Aniversariantes</li>
+                <li href="#">Cardapio</li>
+                <li href="#">Sala Reuniao</li>
                 <li href="#">Dicas</li>
             </ul>
         </li>

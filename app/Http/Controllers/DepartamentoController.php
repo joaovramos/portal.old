@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Empresa;
+use App\Departamentos;
 
-class EmpresaController extends Controller
+class DepartamentoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +16,9 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        $empresas = Empresa::all();
-        return view('indicador.empresa.index', compact('empresas'));
+        $departamentos = Departamentos::all();
+
+        return view('indicador.departamento.index', compact('departamentos'));
     }
 
     /**
@@ -27,7 +28,7 @@ class EmpresaController extends Controller
      */
     public function create()
     {
-        return view('indicador.empresa.create');
+        return view('indicador.departamento.create');
     }
 
     /**
@@ -38,9 +39,9 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        $empresa = Empresa::create($request->all());
+        $departamento = Departamentos::create($request->all());
 
-        return redirect('empresa');
+        redirect('departameto');
     }
 
     /**
@@ -51,9 +52,7 @@ class EmpresaController extends Controller
      */
     public function show($id)
     {
-        $empresa = Empresa::find($id);
-
-        return view('indicador.empresa.show', compact('empresa'));
+        //
     }
 
     /**
@@ -64,10 +63,7 @@ class EmpresaController extends Controller
      */
     public function edit($id)
     {
-        $empresa = Empresa::find($id);
-
-        return view('indicador.empresa.edit', compact('empresa'));
-
+        //
     }
 
     /**
@@ -79,11 +75,7 @@ class EmpresaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $empresa = Empresa::find($id);
-
-        $empresa->update($request->all());
-
-        return redirect('empresa');
+        //
     }
 
     /**
@@ -94,10 +86,6 @@ class EmpresaController extends Controller
      */
     public function destroy($id)
     {
-        $empresa = Empresa::find($id);
-        $empresa->delete();
-
-        Session::flash('message', 'Successfully deleted!');
-        return redirect('empresa');
+        //
     }
 }

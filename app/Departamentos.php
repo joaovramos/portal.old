@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Setor extends Model
+class Departamentos extends Model
 {
     protected $connection = 'pgsql2';
-    protected $fillable = ['nome', 'empresa'];
+    protected $fillable = ['nome', 'id_empresa'];
 }

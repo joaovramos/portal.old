@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Setor;
-
-class SetorController extends Controller
+use App\Funcionario;
+class FuncionarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,8 @@ class SetorController extends Controller
      */
     public function index()
     {
-        $setores = Setor::all();
-
-        return view('setor.index', compact('setores'));
+        $funcionarios = Funcionario::all();
+        return view('indicador.funcionario.index', compact('funcionarios'));
     }
 
     /**
@@ -28,7 +26,7 @@ class SetorController extends Controller
      */
     public function create()
     {
-        //
+        return view('indicador.funcionario.create');
     }
 
     /**
@@ -39,7 +37,9 @@ class SetorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $funcinonario = Funcionario::create();
+        return redirect('funcinario');
     }
 
     /**
@@ -50,7 +50,8 @@ class SetorController extends Controller
      */
     public function show($id)
     {
-        //
+        $funcionario = Funcionario::find($id);
+        return view('indicador.funcionario.show', compact('funcionario'));
     }
 
     /**
@@ -61,7 +62,8 @@ class SetorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $funcionario = Funcionario::find($id);
+        return view('indicador.funcionario.edit', compact('funcionario'));
     }
 
     /**
@@ -73,7 +75,11 @@ class SetorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $funciorio = Funcionario::find($id);
+
+        $funciorio->update($request->all());
+
+        return redirect('funcionario');
     }
 
     /**
@@ -84,6 +90,10 @@ class SetorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $funciorio = Funcionario::find($id);
+        $funciorio->delete();
+
+        Session::flash('message', 'Successfully deleted!');
+        return redirect('funciorio');
     }
 }
